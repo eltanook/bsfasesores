@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Nunito, Nunito_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
 const nunito = Nunito({ 
@@ -52,6 +53,7 @@ export default function RootLayout({
       <body className={`${nunito.variable} ${nunitoSans.variable} font-sans antialiased bg-background text-foreground overflow-x-hidden`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.NODE_ENV === 'production' && <SpeedInsights />}
       </body>
     </html>
   )

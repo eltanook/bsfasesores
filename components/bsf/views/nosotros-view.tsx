@@ -5,6 +5,11 @@ import { CheckCircle2, Award, Target, Users, Heart, ArrowDown } from "lucide-rea
 import { AnimateOnScroll } from "@/components/bsf/animate-on-scroll"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import type { ViewType } from "@/app/page"
+
+interface NosotrosViewProps {
+  onNavigate: (view: ViewType) => void
+}
 
 const values = [
   {
@@ -38,15 +43,20 @@ const timeline = [
   { year: "2024", event: "+200 clientes y +25 años de experiencia" },
 ]
 
-export function NosotrosView() {
+export function NosotrosView({ onNavigate }: NosotrosViewProps) {
   return (
     <div className="pt-16 lg:pt-20">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden min-h-[50vh] flex items-center">
-        <div 
-          className="absolute inset-0 bg-fixed bg-cover bg-[center_70%] grayscale brightness-[0.3]"
-          style={{ backgroundImage: "url('/images/mf-evelyn.jpg')" }}
-        />
+        <div className="absolute inset-0 grayscale brightness-[0.3]">
+          <Image
+            src="/images/mf-evelyn.jpg"
+            alt="BSF Asesores background"
+            fill
+            priority
+            className="object-cover object-[center_70%]"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628]/80 to-[#1a3a5c]/60" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

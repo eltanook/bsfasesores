@@ -43,7 +43,7 @@ export default function Home() {
       case "inicio":
         return <InicioView onNavigate={setCurrentView} />
       case "nosotros":
-        return <NosotrosView />
+        return <NosotrosView onNavigate={setCurrentView} />
       case "servicios":
         return <ServiciosView onNavigate={setCurrentView} />
       case "contacto":
