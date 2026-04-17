@@ -117,6 +117,8 @@ export function AboutSection({ onNavigate }: AboutSectionProps) {
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fotografos-papaya-estudio-sesion-edgar-blanco-3-MKcMsAXZxbo7w0hRl0X3GZfRMeLU4L.jpg"
                   alt="Edgar Blanco - Director de BSF Asesores"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={85}
                   className="object-cover object-[center_35%] group-hover/img:scale-105 transition-transform duration-700"
                 />
                 
@@ -127,6 +129,7 @@ export function AboutSection({ onNavigate }: AboutSectionProps) {
                   <motion.a 
                     whileHover={{ scale: 1.2, y: -5 }}
                     href="#" 
+                    aria-label="Instagram"
                     className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white border border-white/20 hover:bg-[#1a6acd] transition-colors"
                   >
                     <Instagram className="w-6 h-6" />
@@ -134,6 +137,7 @@ export function AboutSection({ onNavigate }: AboutSectionProps) {
                   <motion.a 
                     whileHover={{ scale: 1.2, y: -5 }}
                     href="#" 
+                    aria-label="LinkedIn"
                     className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white border border-white/20 hover:bg-[#1a6acd] transition-colors"
                   >
                     <Linkedin className="w-6 h-6" />
@@ -141,6 +145,7 @@ export function AboutSection({ onNavigate }: AboutSectionProps) {
                   <motion.a 
                     whileHover={{ scale: 1.2, y: -5 }}
                     href="#" 
+                    aria-label="Facebook"
                     className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white border border-white/20 hover:bg-[#1a6acd] transition-colors"
                   >
                     <Facebook className="w-6 h-6" />

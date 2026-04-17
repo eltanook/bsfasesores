@@ -69,6 +69,7 @@ export function Navbar({ currentView, onNavigate, isDarkMode, toggleDarkMode }: 
               alt="BSF Asesores"
               width={140}
               height={50}
+              quality={60}
               className="h-10 lg:h-12 w-auto"
             />
           </button>
@@ -140,6 +141,7 @@ export function Navbar({ currentView, onNavigate, isDarkMode, toggleDarkMode }: 
               <button
                 onClick={toggleDarkMode}
                 className="p-2 rounded-full"
+                aria-label={isDarkMode ? "Activar modo claro" : "Activar modo oscuro"}
               >
                 {isDarkMode ? <SunIcon /> : <MoonIcon />}
               </button>

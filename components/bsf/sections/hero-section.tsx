@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Heart, TrendingUp, Building2, ShieldCheck } from "lucide-react"
 import type { ViewType } from "@/app/page"
+import Image from "next/image"
 
 interface HeroSectionProps {
   onNavigate: (view: ViewType) => void
@@ -77,13 +78,17 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image with Fixed Attachment */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{
-          backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner_aniv-2x1sD6r8CDM9LZWE0RrwLeoQcMJRT1.jpg')`,
-        }}
-      >
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner_aniv-2x1sD6r8CDM9LZWE0RrwLeoQcMJRT1.jpg"
+          alt="Hero Background"
+          fill
+          priority
+          sizes="100vw"
+          quality={80}
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/95 via-[#0a1628]/80 to-[#0a1628]/60" />
       </div>
 

@@ -29,12 +29,15 @@ export function TestimonialsSection() {
   return (
     <section className="relative py-20 lg:py-28 overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{
-          backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner_aniv-2x1sD6r8CDM9LZWE0RrwLeoQcMJRT1.jpg')`,
-        }}
-      >
+      <div className="absolute inset-0">
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner_aniv-2x1sD6r8CDM9LZWE0RrwLeoQcMJRT1.jpg"
+          alt="Testimonios Background"
+          fill
+          sizes="100vw"
+          quality={80}
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-[#0a1628]/85" />
       </div>
 
@@ -69,7 +72,7 @@ export function TestimonialsSection() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white text-lg">{testimonial.name}</h4>
+                    <h3 className="font-bold text-white text-lg">{testimonial.name}</h3>
                     <p className="text-sm text-white/70">{testimonial.role}</p>
                   </div>
                 </div>

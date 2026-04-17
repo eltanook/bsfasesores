@@ -74,6 +74,8 @@ export function ServicesSection() {
                     src="/images/life-insurance.png"
                     alt="Seguros de Vida"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={85}
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-[#0a1628]/20" />
@@ -159,6 +161,8 @@ export function ServicesSection() {
                     src="/images/retirement.png"
                     alt="Planes de Retiro"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={85}
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-[#0a1628]/20" />
