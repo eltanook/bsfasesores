@@ -17,6 +17,7 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://bsfasesores.vercel.app'),
   title: 'BSF Asesores | Protección Patrimonial y Seguros de Vida',
   description: 'Firma financiera líder con más de 25 años de experiencia. Especialistas en seguros de vida, gastos médicos mayores y planes de retiro. Protegemos tu futuro y el de tu familia.',
   keywords: ['seguros de vida', 'asesores financieros México', 'planes de retiro CDMX', 'gastos médicos mayores', 'protección patrimonial', 'BSF Asesores'],
@@ -50,6 +51,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
+      </head>
       <body className={`${nunito.variable} ${nunitoSans.variable} font-sans antialiased bg-background text-foreground overflow-x-hidden`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

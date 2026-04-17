@@ -85,7 +85,8 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
           alt="Hero Background"
           fill
           priority
-          sizes="100vw"
+          fetchPriority="high"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1920px"
           quality={80}
           className="object-cover"
         />
