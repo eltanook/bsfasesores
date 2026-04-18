@@ -74,9 +74,10 @@ export function AboutSection({ onNavigate }: AboutSectionProps) {
               Sobre <span className="text-[#1a6acd] dark:text-white">BSF Asesores</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              BSF Asesores es una firma con más de 25 años de experiencia en el sector financiero, 
-              especializada en ofrecer soluciones integrales para la protección patrimonial y el 
-              desarrollo de negocios en el sector asegurador.
+              BSF Asesores es una firma de élite con más de 25 años de trayectoria sólida en el mercado asegurador y financiero mexicano. 
+              Nos especializamos en el diseño de estrategias de blindaje patrimonial, optimización fiscal y desarrollo integral de negocios. 
+              Nuestra filosofía se basa en ir más allá de una simple protección; buscamos construir legados financieros resilientes que garanticen 
+              la tranquilidad y el bienestar de las familias y empresas que confían en nosotros.
             </p>
 
             {/* Values */}

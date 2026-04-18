@@ -96,19 +96,12 @@ export function Navbar({ currentView, onNavigate, isDarkMode, toggleDarkMode }: 
           </div>
 
           {/* Right side actions */}
+          {/* Right side actions */}
           <div className="flex items-center gap-4">
-            {/* CTA Button - Desktop */}
-            <Button 
-              onClick={() => handleNavClick("contacto")}
-              className="hidden lg:flex bg-primary hover:bg-primary/90 text-primary-foreground px-8 font-bold tracking-tight rounded-full"
-            >
-              SOLICITAR ASESORÍA GRATUITA
-            </Button>
-
-            {/* Dark Mode Toggle */}
+            {/* Dark Mode Toggle - Moved Left of CTA */}
             <button
               onClick={toggleDarkMode}
-              className="p-2 ml-2 rounded-full border border-border hover:bg-accent transition-colors hidden lg:flex"
+              className="p-2 mr-2 rounded-full border border-border hover:bg-primary/10 hover:border-primary/50 text-foreground hover:text-primary transition-all hidden lg:flex"
               aria-label={isDarkMode ? "Activar modo claro" : "Activar modo oscuro"}
             >
               <AnimatePresence mode="wait" initial={false}>
@@ -135,6 +128,14 @@ export function Navbar({ currentView, onNavigate, isDarkMode, toggleDarkMode }: 
                 )}
               </AnimatePresence>
             </button>
+
+            {/* CTA Button - Desktop */}
+            <Button 
+              onClick={() => handleNavClick("contacto")}
+              className="hidden lg:flex bg-primary hover:bg-primary/90 text-primary-foreground px-8 font-bold tracking-tight rounded-full transition-all"
+            >
+              SOLICITAR ASESORÍA GRATUITA
+            </Button>
 
             {/* Mobile Menu Toggle */}
             <div className="lg:hidden flex items-center gap-2">

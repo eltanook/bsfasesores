@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { AnimateOnScroll } from "@/components/bsf/animate-on-scroll"
-import { Heart, ArrowUpRight, Users, CheckCircle2, CircleDollarSign } from "lucide-react"
+import { Heart, ArrowUpRight, Phone, CheckCircle2, CircleDollarSign } from "lucide-react"
 import Image from "next/image"
 
 const services = [
@@ -103,8 +103,8 @@ export function ServicesSection() {
 
               <div className="relative p-8 lg:p-10 h-full flex flex-col z-10">
                 <div className="flex items-start justify-between mb-6">
-                  <div className="p-3 bg-[#1a6acd]/10 rounded-xl">
-                    <Users className="w-8 h-8 text-[#1a6acd]" />
+                  <div className="p-5 bg-[#1a6acd]/10 rounded-2xl">
+                    <Phone className="w-14 h-14 text-[#1a6acd]" />
                   </div>
                   <ArrowUpRight className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>

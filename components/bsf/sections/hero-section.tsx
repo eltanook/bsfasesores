@@ -108,9 +108,9 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={dynamicWords[currentWordIndex]}
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -20, opacity: 0 }}
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: 20, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 100, damping: 20 }}
                     className="text-white dark:text-[#1a6acd] block"
                   >
@@ -192,13 +192,11 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
               </div>
 
               {/* Floating Elements */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+              <div
                 className="absolute -top-4 -right-4 bg-[#1a6acd] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg"
               >
                 100% Confiable
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>

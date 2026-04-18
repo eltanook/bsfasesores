@@ -50,8 +50,15 @@ export function Footer({ onNavigate }: FooterProps) {
   }
 
   return (
-    <footer className="bg-[#1a1f2e] text-white">
-      <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-16">
+    <footer className="relative bg-[#0a1628] text-white overflow-hidden">
+      {/* Premium CSS Footer Style - Matching Header */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[50%] bg-[#1a6acd]/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-20%] left-[-10%] w-[50%] h-[50%] bg-[#1a3a5c]/20 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+      </div>
+
+      <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-16 relative z-10">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
           {/* Logo and Contact Info */}
           <div className="space-y-4">

@@ -47,17 +47,14 @@ export function NosotrosView({ onNavigate }: NosotrosViewProps) {
   return (
     <div className="pt-16 lg:pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden min-h-[50vh] flex items-center">
-        <div className="absolute inset-0 grayscale brightness-[0.3]">
-          <Image
-            src="/images/mf-evelyn.jpg"
-            alt="BSF Asesores background"
-            fill
-            priority
-            className="object-cover object-[center_70%]"
-          />
+      <section className="relative py-20 lg:py-32 overflow-hidden min-h-[50vh] flex items-center bg-[#0a1628]">
+        {/* Premium CSS Header Style */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#1a6acd]/20 rounded-full blur-[120px] animate-pulse" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#1a3a5c]/30 rounded-full blur-[120px]" />
+          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628]/80 to-[#1a3a5c]/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628]/80 to-[#0a1628]/40" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <AnimateOnScroll variant="slideLeft">
