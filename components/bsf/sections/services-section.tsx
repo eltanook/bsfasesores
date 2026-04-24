@@ -49,7 +49,7 @@ export function ServicesSection() {
           <AnimateOnScroll variant="slideLeft" className="md:col-span-2 lg:col-span-2">
             <motion.div
               whileHover={{ y: -5 }}
-              className="group relative h-full min-h-[340px] bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] rounded-[2.5rem] overflow-hidden grid md:grid-cols-2"
+              className="group relative h-full min-h-[300px] md:min-h-[340px] bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] rounded-[2.5rem] overflow-hidden grid md:grid-cols-2"
             >
               <div className="relative p-8 lg:p-10 flex flex-col z-10">
                 <div className="flex items-start justify-between mb-6">
@@ -68,7 +68,7 @@ export function ServicesSection() {
                 </div>
               </div>
               
-              <div className="relative p-6 h-full flex items-center justify-center">
+              <div className="relative p-6 h-full hidden md:flex items-center justify-center">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-white/5">
                   <Image
                     src="/images/life-insurance.png"
@@ -88,23 +88,23 @@ export function ServicesSection() {
           <AnimateOnScroll variant="slideRight" delay={0.1} className="lg:col-span-1">
             <motion.div
               whileHover={{ y: -5 }}
-              className="group relative h-full min-h-[260px] bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] rounded-[2.5rem] overflow-hidden"
+              className="group relative h-full min-h-[300px] md:min-h-[260px] bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] rounded-[2.5rem] overflow-hidden"
             >
               {/* Background Favicon Logo - Bottom Center */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 opacity-[0.12] pointer-events-none">
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 opacity-[0.12] pointer-events-none hidden md:block">
                 <Image
                   src="/images/favicon.png"
                   alt="Background Logo"
-                  width={140}
-                  height={140}
+                  width={520}
+                  height={520}
                   className="grayscale invert"
                 />
               </div>
 
               <div className="relative p-8 lg:p-10 h-full flex flex-col z-10">
                 <div className="flex items-start justify-between mb-6">
-                  <div className="p-5 bg-[#1a6acd]/10 rounded-2xl">
-                    <Phone className="w-14 h-14 text-[#1a6acd]" />
+                  <div className="p-3 bg-[#1a6acd]/10 rounded-xl">
+                    <Phone className="w-8 h-8 text-[#1a6acd]" />
                   </div>
                   <ArrowUpRight className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>
@@ -122,9 +122,9 @@ export function ServicesSection() {
           <AnimateOnScroll variant="slideLeft" delay={0.2} className="lg:col-span-1">
             <motion.div
               whileHover={{ y: -5 }}
-              className="group relative h-full min-h-[260px] bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] rounded-[2.5rem] overflow-hidden"
+              className="group relative h-full min-h-[300px] md:min-h-[260px] bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] rounded-[2.5rem] overflow-hidden"
             >
-              <div className="absolute bottom-0 right-0 w-3/4 h-3/4 opacity-20 pointer-events-none">
+              <div className="absolute bottom-0 right-0 w-3/4 h-3/4 opacity-20 pointer-events-none hidden md:block">
                 <svg viewBox="0 0 200 400" className="absolute bottom-0 right-0 h-full" preserveAspectRatio="xMaxYMax meet">
                   <path d="M80,400 L80,200 L100,150 L100,130 Q90,120 90,100 Q90,80 100,70 Q110,60 120,70 Q130,80 130,100 Q130,120 120,130 L120,150 L140,200 L140,400 Z" fill="currentColor" className="text-[#1a6acd]" />
                   <path d="M60,400 L60,250 L80,200 L80,400 Z" fill="currentColor" className="text-[#1a6acd]/70" />
@@ -153,9 +153,9 @@ export function ServicesSection() {
           <AnimateOnScroll variant="slideRight" delay={0.3} className="md:col-span-2 lg:col-span-2">
             <motion.div
               whileHover={{ y: -5 }}
-              className="group relative h-full min-h-[340px] bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] rounded-[2.5rem] overflow-hidden grid md:grid-cols-2"
+              className="group relative h-full min-h-[300px] md:min-h-[340px] bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] rounded-[2.5rem] overflow-hidden grid md:grid-cols-2"
             >
-              <div className="relative p-6 h-full flex items-center justify-center order-2 md:order-1">
+              <div className="relative p-6 h-full hidden md:flex items-center justify-center order-2 md:order-1">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-white/5">
                   <Image
                     src="/images/retirement.png"

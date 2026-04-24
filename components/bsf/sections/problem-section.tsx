@@ -51,7 +51,7 @@ export function ProblemSection() {
   const allProblems = [...problems, ...problems, ...problems] // Triple for seamless scroll
 
   return (
-    <section className="py-20 lg:py-28 bg-background dark:bg-[#0a1628] overflow-hidden">
+    <section className="relative py-20 lg:py-28 bg-background dark:bg-[#0a1628] md:overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8 mb-16">
         <AnimateOnScroll variant="fadeUp" className="text-center max-w-3xl mx-auto">
           <span className="tag-pill">
@@ -68,8 +68,8 @@ export function ProblemSection() {
         </AnimateOnScroll>
       </div>
 
-      {/* Infinite Ribbon Carousel - CSS Animation for reliable pause-on-hover */}
-      <div className="relative w-full overflow-hidden py-4">
+      {/* Desktop: Infinite Ribbon Carousel */}
+      <div className="hidden md:block relative w-full overflow-hidden py-4">
         {/* Blur Edges */}
         <div className="absolute left-0 top-0 bottom-0 w-24 lg:w-64 bg-gradient-to-r from-background dark:from-[#0a1628] to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 lg:w-64 bg-gradient-to-l from-background dark:from-[#0a1628] to-transparent z-10 pointer-events-none" />
@@ -94,6 +94,36 @@ export function ProblemSection() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Mobile: Scroll Stacking Cards */}
+      <div className="md:hidden px-6 pb-32">
+        {problems.map((problem, index) => (
+          <motion.div
+            key={problem.title}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="sticky rounded-[2.5rem] bg-card border border-border shadow-[0_-15px_40px_-10px_rgba(0,0,0,0.2)] dark:shadow-[0_-15px_40px_-10px_rgba(26,106,205,0.1)] p-8 min-h-[280px] flex flex-col justify-center"
+            style={{ 
+              top: `${100 + index * 12}px`,
+              zIndex: index + 1,
+              marginTop: index === 0 ? 0 : '10vh', // Significant spacing to trigger sticky
+            }}
+          >
+            <div className="w-14 h-14 bg-[#1a6acd]/10 rounded-2xl flex items-center justify-center mb-6">
+              <span className="text-[#1a6acd]">
+                {problem.icon}
+              </span>
+            </div>
+            <h3 className="text-xl font-bold text-[#0a1628] dark:text-[#1a6acd] mb-3">
+              {problem.title}
+            </h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              {problem.description}
+            </p>
+          </motion.div>
+        ))}
       </div>
 
       <style jsx>{`

@@ -1,10 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { AnimateOnScroll } from "@/components/bsf/animate-on-scroll"
 import { Button } from "@/components/ui/button"
-import { Search, ChevronDown, MessageCircle, Calendar, ArrowRight } from "lucide-react"
+import { Search, ChevronDown, MessageCircle, Calendar, ArrowRight, Check } from "lucide-react"
 
 const categories = [
   { id: "general", label: "General" },
@@ -106,6 +106,18 @@ const faqs = [
 export function FAQView({ onNavigate }: { onNavigate: (view: any) => void }) {
   const [activeCategory, setActiveCategory] = useState("general")
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [])
 
   const filteredFaqs = faqs.filter(faq => 
     (faq.category === activeCategory || activeCategory === "all")
@@ -144,11 +156,11 @@ export function FAQView({ onNavigate }: { onNavigate: (view: any) => void }) {
             </AnimateOnScroll>
 
             <AnimateOnScroll variant="slideRight" className="relative hidden lg:block">
-              <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-8 border-white/5">
+              <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-8 border-white/5 h-[400px] lg:h-[500px]">
                 <img
-                  src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1600"
+                  src="/images/cta-team.jpg"
                   alt="Atención BSF"
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </AnimateOnScroll>
@@ -159,7 +171,8 @@ export function FAQView({ onNavigate }: { onNavigate: (view: any) => void }) {
       {/* Categories - Adjusted Positioning to bridge sections perfectly */}
       <section className="container mx-auto px-4 relative z-20 -mt-6">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-2">
+          {/* Desktop Pills */}
+          <div className="hidden md:flex flex-wrap justify-center gap-2">
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -176,6 +189,52 @@ export function FAQView({ onNavigate }: { onNavigate: (view: any) => void }) {
                 {cat.label}
               </button>
             ))}
+          </div>
+
+          {/* Mobile Dropdown */}
+          <div className="md:hidden" ref={dropdownRef}>
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="w-full p-5 rounded-2xl bg-card border border-border text-foreground font-black uppercase tracking-widest flex items-center justify-between shadow-xl"
+            >
+              <span>{categories.find(c => c.id === activeCategory)?.label}</span>
+              <motion.div
+                animate={{ rotate: isDropdownOpen ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ChevronDown className="w-5 h-5 text-primary" />
+              </motion.div>
+            </button>
+
+            <AnimatePresence>
+              {isDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  className="absolute left-4 right-4 mt-2 p-2 rounded-2xl bg-background/95 backdrop-blur-xl border border-border shadow-2xl z-50 overflow-hidden"
+                >
+                  {categories.map((cat) => (
+                    <button
+                      key={cat.id}
+                      onClick={() => {
+                        setActiveCategory(cat.id)
+                        setOpenIndex(null)
+                        setIsDropdownOpen(false)
+                      }}
+                      className={`flex items-center justify-between w-full p-4 rounded-xl text-xs font-black uppercase tracking-widest transition-all ${
+                        activeCategory === cat.id 
+                          ? "bg-primary/10 text-primary" 
+                          : "hover:bg-accent text-foreground/70"
+                      }`}
+                    >
+                      {cat.label}
+                      {activeCategory === cat.id && <Check className="w-4 h-4" />}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </section>
@@ -244,7 +303,7 @@ export function FAQView({ onNavigate }: { onNavigate: (view: any) => void }) {
               <div 
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1600')`,
+                  backgroundImage: `url('/images/team.jpg')`,
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] via-[#0a1628]/90 to-[#0a1628]/60" />

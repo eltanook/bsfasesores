@@ -32,7 +32,11 @@ const contactInfo = [
   },
 ]
 
-export function ContactoView() {
+export function ContactoView({ isDarkMode }: { isDarkMode: boolean }) {
+  const calendlyUrl = isDarkMode 
+    ? "https://calendly.com/alexblan/45min?hide_landing_page_details=1&hide_gdpr_banner=1&back=1&month=2026-04&background_color=0a1628&text_color=ffffff&primary_color=1a6acd"
+    : "https://calendly.com/alexblan/45min?hide_landing_page_details=1&hide_gdpr_banner=1&back=1&month=2026-04"
+
   const [formState, setFormState] = useState({
     nombre: "",
     empresa: "",
@@ -57,7 +61,33 @@ export function ContactoView() {
     <div className="pt-32 lg:pt-44 bg-background dark:bg-[#0a1628]">
       <div className="container mx-auto px-4 lg:px-8">
         
-        {/* Block 1: Info & Form (8/4 Grid) */}
+        {/* Block 1: Calendly (Focus: Entrevista con Alex Blanco) */}
+        <section className="mb-24 lg:mb-32">
+          <AnimateOnScroll variant="fadeUp">
+            <div className="text-center mb-12">
+              <span className="tag-pill mb-4">Agenda Directa</span>
+              <h2 className="text-3xl lg:text-5xl font-black text-[#0a1628] dark:text-[#1a6acd] mb-6 font-serif uppercase">
+                Entrevista con <span className="text-[#1a6acd] dark:text-white">Alex Blanco</span>
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed italic">
+                Selecciona el horario que mejor te convenga para una entrevista de perfilamiento 
+                con nuestro equipo de liderazgo.
+              </p>
+            </div>
+            <div className={`h-[600px] sm:h-[750px] rounded-3xl sm:rounded-[3.5rem] overflow-hidden shadow-3xl border-8 border-white dark:border-white/5 transition-colors duration-500 ${isDarkMode ? "bg-[#0a1628]" : "bg-white"}`}>
+              <iframe
+                src={calendlyUrl}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                title="Calendly Alex Blanco"
+                className={isDarkMode ? "bg-[#0a1628]" : "bg-white"}
+              />
+            </div>
+          </AnimateOnScroll>
+        </section>
+
+        {/* Block 2: Info & Form (8/4 Grid) */}
         <section className="mb-24 lg:mb-32">
           <div className="grid lg:grid-cols-12 gap-16 max-w-7xl mx-auto items-start">
             
@@ -162,30 +192,7 @@ export function ContactoView() {
           </div>
         </section>
 
-        {/* Block 2: Calendly (Col-12) */}
-        <section className="mb-24 lg:mb-32">
-          <AnimateOnScroll variant="fadeUp">
-            <div className="text-center mb-12">
-              <span className="tag-pill mb-4">Agenda Online</span>
-              <h2 className="text-3xl lg:text-5xl font-black text-[#0a1628] dark:text-[#1a6acd] mb-6 font-serif uppercase">
-                Reserva Una <span className="text-[#1a6acd] dark:text-white">Sesión Estratégica</span>
-              </h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed italic">
-                Selecciona el horario que mejor te convenga para una videollamada de diagnóstico 
-                sin costo con nuestros líderes de protección financiera.
-              </p>
-            </div>
-            <div className="h-[600px] sm:h-[750px] rounded-3xl sm:rounded-[3.5rem] overflow-hidden shadow-3xl border-8 border-white dark:border-white/5 bg-white">
-              <iframe
-                src="https://calendly.com/alexblan?hide_landing_page_details=1&hide_gdpr_banner=1"
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                title="Calendly Alex Blanco"
-              />
-            </div>
-          </AnimateOnScroll>
-        </section>
+
       </div>
 
       {/* Block 3: Map View (OUTSIDE container for true full width) */}

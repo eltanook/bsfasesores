@@ -117,19 +117,84 @@ export function NosotrosView({ onNavigate }: NosotrosViewProps) {
         </div>
       </section>
 
+      {/* Nuestro Equipo Section */}
+      <section className="py-20 lg:py-28 bg-background overflow-hidden border-b border-border">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
+            {/* Content (Left) */}
+            <AnimateOnScroll variant="slideLeft">
+              <span className="tag-pill">
+                Nuestra Fuerza
+              </span>
+              <h2 className="text-4xl lg:text-5xl font-black text-[#0a1628] dark:text-[#1a6acd] mb-8 font-serif">
+                Nuestro <span className="text-[#1a6acd] dark:text-white">Equipo</span>
+              </h2>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mb-10">
+                <p>
+                  En BSF Asesores, contamos con un equipo multidisciplinario de expertos comprometidos 
+                  con la excelencia. Nuestra fuerza radica en la combinación de experiencia, 
+                  innovación y una profunda vocación de servicio.
+                </p>
+                <p>
+                  Cada miembro de nuestro equipo aporta una visión única para garantizar que 
+                  nuestros clientes reciban la mejor asesoría integral en protección y 
+                  planeación financiera. Juntos, construimos el futuro que tú y tu familia merecen.
+                </p>
+              </div>
+
+              <Button 
+                variant="default" 
+                size="lg"
+                onClick={() => onNavigate("contacto")}
+                className="rounded-full px-8 shadow-xl hover:shadow-[#1a6acd]/20"
+              >
+                Conocer al Equipo
+              </Button>
+
+              <div className="grid sm:grid-cols-2 gap-4 mt-12">
+                <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-2xl border border-border">
+                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0" />
+                  <span className="font-bold text-sm">Asesoría Multidisciplinaria</span>
+                </div>
+                <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-2xl border border-border">
+                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0" />
+                  <span className="font-bold text-sm">Compromiso de Élite</span>
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Image (Right) */}
+            <AnimateOnScroll variant="slideRight" className="relative group">
+              <div className="relative rounded-[30px] overflow-hidden shadow-2xl h-[400px] lg:h-[650px]">
+                <Image
+                  src="/images/team.jpg"
+                  alt="Nuestro Equipo BSF"
+                  width={600}
+                  height={800}
+                  className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/40 to-transparent" />
+              </div>
+              {/* Decorative element */}
+              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#1a6acd]/10 rounded-full blur-3xl -z-10" />
+            </AnimateOnScroll>
+          </div>
+        </div>
+      </section>
+
       {/* Leader & Philosophy Section - Merged */}
       <section className="py-20 lg:py-28 bg-background overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
             {/* Image (Now Left) */}
             <AnimateOnScroll variant="slideLeft" className="relative group">
-              <div className="relative rounded-[30px] overflow-hidden shadow-2xl max-h-[650px]">
+              <div className="relative rounded-[30px] overflow-hidden shadow-2xl h-[400px] lg:h-[650px]">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fotografos-papaya-estudio-sesion-edgar-blanco-3-MKcMsAXZxbo7w0hRl0X3GZfRMeLU4L.jpg"
                   alt="Edgar Blanco - Director de BSF Asesores"
                   width={600}
                   height={800}
-                  className="w-full h-[650px] object-cover object-[center_35%] transition-all duration-1000"
+                  className="w-full h-full object-cover object-[center_35%] transition-all duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/40 to-transparent" />
               </div>

@@ -25,7 +25,7 @@ export function CTABannerSection({ onNavigate }: CTABannerSectionProps) {
             <div 
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: `url('/images/cta-team.jpg')`,
+                backgroundImage: `url('/images/team.jpg')`,
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/90 via-[#0a1628]/80 to-[#0a1628]/60" />

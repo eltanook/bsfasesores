@@ -161,34 +161,34 @@ export function Navbar({ currentView, onNavigate, isDarkMode, toggleDarkMode }: 
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden overflow-hidden bg-background border-t border-border"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border shadow-2xl overflow-hidden"
             >
-              <div className="py-6 space-y-4 px-4">
-                {navLinks.map((link) => (
-                  <button
+              <div className="container mx-auto px-6 py-10 flex flex-col gap-2">
+                {navLinks.map((link, index) => (
+                  <motion.button
                     key={link.view}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
                     onClick={() => handleNavClick(link.view)}
-                    className={`block w-full text-center py-4 rounded-xl text-sm font-bold tracking-widest transition-colors ${
+                    className={`flex items-center justify-between w-full p-5 rounded-2xl text-left transition-all ${
                       currentView === link.view 
-                        ? "bg-primary text-primary-foreground" 
-                        : "hover:bg-accent text-foreground/80 border border-transparent"
+                        ? "bg-primary/10 text-primary border border-primary/20" 
+                        : "hover:bg-accent text-foreground/70"
                     }`}
                   >
-                    {link.label}
-                  </button>
+                    <span className="text-sm font-black tracking-[0.2em] uppercase">
+                      {link.label}
+                    </span>
+                    {currentView === link.view && (
+                      <div className="w-2 h-2 bg-primary rounded-full" />
+                    )}
+                  </motion.button>
                 ))}
-                <div className="pt-4">
-                  <Button 
-                    onClick={() => handleNavClick("contacto")}
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-7 rounded-2xl font-bold"
-                  >
-                    SOLICITAR ASESORÍA GRATUITA
-                  </Button>
-                </div>
               </div>
             </motion.div>
           )}

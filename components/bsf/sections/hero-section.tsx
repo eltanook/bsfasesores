@@ -94,7 +94,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
             transition={{ duration: 0.8 }}
             className="text-white"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-8xl font-black leading-[1.1] mb-8 font-serif text-[#1a6acd] dark:text-white">
+            <h1 className="text-6xl md:text-5xl lg:text-8xl font-black leading-[1.1] mb-8 font-serif text-[#1a6acd] dark:text-white">
               Protegemos tu <br/>
               <span className="relative inline-block min-w-[200px]">
                 <AnimatePresence mode="wait">
@@ -128,7 +128,8 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
                 size="lg"
                 onClick={() => onNavigate("contacto")}
               >
-                Agendar Sesión de Diagnóstico Gratuita
+                <span className="hidden md:inline">Agendar Sesión de Diagnóstico Gratuita</span>
+                <span className="md:hidden">Agendar Sesión Gratis</span>
               </Button>
               <p className="text-sm text-gray-400">
                 Sin compromiso de contratación.

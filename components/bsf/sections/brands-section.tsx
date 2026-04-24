@@ -17,7 +17,7 @@ const brands = [
 
 export function BrandsSection() {
   return (
-    <section className="py-16 lg:py-20 bg-background border-t border-border overflow-hidden">
+    <section className="py-16 lg:py-20 bg-background border-t border-border overflow-hidden hidden md:block">
       <div className="container mx-auto px-4 lg:px-8 mb-12">
         <AnimateOnScroll variant="fadeUp" className="text-center">
           <p className="text-sm text-muted-foreground uppercase tracking-wider mb-2">

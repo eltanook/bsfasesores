@@ -95,13 +95,13 @@ export function ServiciosView({ onNavigate }: ServiciosViewProps) {
             </AnimateOnScroll>
 
             <AnimateOnScroll variant="slideRight" className="relative hidden lg:block">
-              <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-8 border-white/5">
+              <div className="relative rounded-[40px] overflow-hidden shadow-2xl border-8 border-white/5 h-[400px] lg:h-[575px]">
                 <Image
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1600"
+                  src="/images/team2.jpg"
                   alt="Asesoría BSF"
                   width={600}
                   height={800}
-                  className="w-full h-[575px] object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </AnimateOnScroll>
@@ -203,7 +203,7 @@ export function ServiciosView({ onNavigate }: ServiciosViewProps) {
               <div 
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1600')`,
+                  backgroundImage: `url('/images/team.jpg')`,
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] via-[#0a1628]/90 to-[#0a1628]/60" />

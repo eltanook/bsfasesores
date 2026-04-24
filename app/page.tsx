@@ -41,17 +41,17 @@ export default function Home() {
   const renderView = () => {
     switch (currentView) {
       case "inicio":
-        return <InicioView onNavigate={setCurrentView} />
+        return <InicioView onNavigate={setCurrentView} isDarkMode={isDarkMode} />
       case "nosotros":
         return <NosotrosView onNavigate={setCurrentView} />
       case "servicios":
         return <ServiciosView onNavigate={setCurrentView} />
       case "contacto":
-        return <ContactoView />
+        return <ContactoView isDarkMode={isDarkMode} />
       case "faq":
         return <FAQView onNavigate={setCurrentView} />
       default:
-        return <InicioView onNavigate={setCurrentView} />
+        return <InicioView onNavigate={setCurrentView} isDarkMode={isDarkMode} />
     }
 }
 
