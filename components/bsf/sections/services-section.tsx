@@ -7,22 +7,22 @@ import Image from "next/image"
 
 const services = [
   {
-    title: "Asesoría en Seguros de Vida",
-    description: "Protección financiera integral para tu familia con seguros de vida que combinan ahorro, inversión y coberturas flexibles. Aseguramos tu legado con una estrategia personalizada adaptada a cada etapa de tu vida.",
+    title: "Desarrollo de Asesores de Seguros",
+    description: "Lideramos el éxito de una nueva generación de asesores, brindando mentoría experta, capacitación y acompañamiento continuo. Además de herramientas digitales para que te puedas convertir en un empresario dentro del sector asegurador.",
     featured: true,
   },
   {
-    title: "Promotoría y Desarrollo",
-    description: "Lideramos el éxito de una nueva generación de asesores, brindando mentoría experta, herramientas digitales y un portafolio premium para potenciar tu carrera profesional.",
+    title: "Planes Personales de Retiro",
+    description: "Diseñamos planes de retiro con una visión estratégica, optimizando rendimientos y beneficios fiscales para que disfrutes de una jubilación digna, segura y financieramente independiente.",
+    featured: true,
   },
   {
     title: "Gastos Médicos Mayores",
     description: "Garantizamos el acceso a la mejor atención médica privada con seguros de cobertura amplia, coordinando servicios hospitalarios y tratamientos especializados.",
   },
   {
-    title: "Planes Personales de Retiro",
-    description: "Diseñamos planes de retiro con una visión estratégica, optimizando rendimientos y beneficios fiscales para que disfrutes de una jubilación digna, segura y financieramente independiente.",
-    featured: true,
+    title: "Asesoría en Seguros de Vida",
+    description: "Protección financiera integral para tu familia con seguros de vida que combinan ahorro, inversión y coberturas flexibles. Aseguramos tu legado con una estrategia personalizada.",
   },
 ]
 
@@ -45,7 +45,7 @@ export function ServicesSection() {
         {/* Bento Grid Layout - 3 Columns */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           
-          {/* Service 1 - Life Insurance */}
+          {/* Service 1 - Advisor Development (Big) */}
           <AnimateOnScroll variant="slideLeft" className="md:col-span-2 lg:col-span-2">
             <motion.div
               whileHover={{ y: -5 }}
@@ -54,7 +54,7 @@ export function ServicesSection() {
               <div className="relative p-8 lg:p-10 flex flex-col z-10">
                 <div className="flex items-start justify-between mb-6">
                   <div className="p-3 bg-[#1a6acd]/10 rounded-xl">
-                    <Heart className="w-8 h-8 text-[#1a6acd]" />
+                    <Phone className="w-8 h-8 text-[#1a6acd]" />
                   </div>
                   <ArrowUpRight className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>
@@ -71,8 +71,8 @@ export function ServicesSection() {
               <div className="relative p-6 h-full hidden md:flex items-center justify-center">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-white/5">
                   <Image
-                    src="/images/life-insurance.png"
-                    alt="Seguros de Vida"
+                    src="/images/mentorship_advisors.png"
+                    alt="Desarrollo de Asesores"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
                     quality={85}
@@ -84,27 +84,16 @@ export function ServicesSection() {
             </motion.div>
           </AnimateOnScroll>
 
-          {/* Service 2 - Advisor Development */}
+          {/* Service 2 - Retirement Plans (Small) */}
           <AnimateOnScroll variant="slideRight" delay={0.1} className="lg:col-span-1">
             <motion.div
               whileHover={{ y: -5 }}
               className="group relative h-full min-h-[300px] md:min-h-[260px] bg-gradient-to-br from-[#0a1628] to-[#1a3a5c] rounded-[2.5rem] overflow-hidden"
             >
-              {/* Background Favicon Logo - Bottom Center */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 opacity-[0.12] pointer-events-none hidden md:block">
-                <Image
-                  src="/images/favicon.png"
-                  alt="Background Logo"
-                  width={520}
-                  height={520}
-                  className="grayscale invert"
-                />
-              </div>
-
               <div className="relative p-8 lg:p-10 h-full flex flex-col z-10">
                 <div className="flex items-start justify-between mb-6">
                   <div className="p-3 bg-[#1a6acd]/10 rounded-xl">
-                    <Phone className="w-8 h-8 text-[#1a6acd]" />
+                    <CircleDollarSign className="w-8 h-8 text-[#1a6acd]" />
                   </div>
                   <ArrowUpRight className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>
@@ -118,7 +107,7 @@ export function ServicesSection() {
             </motion.div>
           </AnimateOnScroll>
 
-          {/* Service 3 - Medical Insurance */}
+          {/* Service 3 - Medical Insurance (Small) */}
           <AnimateOnScroll variant="slideLeft" delay={0.2} className="lg:col-span-1">
             <motion.div
               whileHover={{ y: -5 }}
@@ -149,7 +138,7 @@ export function ServicesSection() {
             </motion.div>
           </AnimateOnScroll>
 
-          {/* Service 4 - Retirement Plans */}
+          {/* Service 4 - Life Insurance (Big) */}
           <AnimateOnScroll variant="slideRight" delay={0.3} className="md:col-span-2 lg:col-span-2">
             <motion.div
               whileHover={{ y: -5 }}
@@ -158,8 +147,8 @@ export function ServicesSection() {
               <div className="relative p-6 h-full hidden md:flex items-center justify-center order-2 md:order-1">
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-white/5">
                   <Image
-                    src="/images/retirement.png"
-                    alt="Planes de Retiro"
+                    src="/images/life-insurance.png"
+                    alt="Seguros de Vida"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
                     quality={85}
@@ -172,7 +161,7 @@ export function ServicesSection() {
               <div className="relative p-8 lg:p-10 flex flex-col z-10 order-1 md:order-2">
                 <div className="flex items-start justify-between mb-6">
                   <div className="p-3 bg-[#1a6acd]/10 rounded-xl">
-                    <CircleDollarSign className="w-8 h-8 text-[#1a6acd]" />
+                    <Heart className="w-8 h-8 text-[#1a6acd]" />
                   </div>
                   <ArrowUpRight className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>

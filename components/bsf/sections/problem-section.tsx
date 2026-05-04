@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { AnimateOnScroll } from "@/components/bsf/animate-on-scroll"
-import { LineChart, Clock, Activity, HelpCircle, TrendingDown, ShieldAlert, GraduationCap, UserCircle } from "lucide-react"
+import { LineChart, Clock, Activity, HelpCircle, TrendingDown, ShieldAlert, GraduationCap, UserCircle, CarFront, Home } from "lucide-react"
 
 const problems = [
   {
@@ -12,13 +12,18 @@ const problems = [
   },
   {
     title: "Retiro Sin Planificar",
-    description: "Sin un plan, tu estabilidad financiera futura está en riesgo.",
+    description: "Sin una estrategia, tu estabilidad financiera futura está en riesgo.",
     icon: <Clock className="w-6 h-6" />,
   },
   {
-    title: "Gastos Médicos Inesperados",
-    description: "Una emergencia de salud puede agotar tus ahorros en semanas.",
+    title: "Gastos Médicos",
+    description: "Una emergencia de salud puede agotar tu patrimonio en semanas.",
     icon: <Activity className="w-6 h-6" />,
+  },
+  {
+    title: "Patrimonio (Autos y Casas)",
+    description: "¿Están tus bienes más preciados realmente protegidos ante cualquier siniestro?",
+    icon: <Home className="w-6 h-6" />,
   },
   {
     title: "Falta de Asesoría",
@@ -32,12 +37,12 @@ const problems = [
   },
   {
     title: "Patrimonio Expuesto",
-    description: "Años de esfuerzo pueden desaparecer ante una crisis no prevista.",
+    description: "Años de esfuerzo pueden desaparecer ante una eventualidad no prevista.",
     icon: <ShieldAlert className="w-6 h-6" />,
   },
   {
     title: "Educación Incierta",
-    description: "El costo de la universidad crece más rápido que la economía.",
+    description: "¿Estás preparado para el costo de la universidad de tus hijos?",
     icon: <GraduationCap className="w-6 h-6" />,
   },
   {

@@ -13,26 +13,27 @@ interface ServiciosViewProps {
 
 const services = [
   {
-    tag: "Protección Familiar",
-    title: "Asesoría En Seguros De Vida",
-    description: "No solo vendemos pólizas, diseñamos el blindaje de tu familia. Te ayudamos a elegir el seguro de vida ideal, con opciones flexibles que incluyen ahorro y cobertura personalizada.",
-    features: [
-      "Coberturas flexibles adaptadas a tu etapa de vida",
-      "Estrategias con componente de ahorro e inversión bursátil",
-      "Blindaje patrimonial ante fluctuaciones económicas",
-    ],
-    image: "/images/life-insurance.png",
-  },
-  {
     tag: "Carrera Profesional",
-    title: "Promotoría & Desarrollo de Asesores",
+    title: "Desarrollo de Asesores de Seguros",
     description: "Buscamos a los futuros líderes del sector asegurador. Te ofrecemos un programa de formación acelerada, mentoría directa y las herramientas tecnológicas más avanzadas del mercado.",
     features: [
       "Programa 'BSF Academy' de capacitación técnica",
       "Mentorías presenciales y digitales personalizadas",
-      "Ecosistema digital de prospección y CRM avanzado",
+      "Capacitación y acompañamiento continuo",
     ],
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200",
+    image: "/images/mentorship_advisors.png",
+  },
+  {
+    tag: "Futuro Financiero",
+    title: "Planes Personales de Retiro (PPR)",
+    description: "El retiro es la etapa más larga de tu vida. Implementamos planes que aprovechan los beneficios fiscales para que tus rendimientos protejan tu patrimonio contra la inflación.",
+    features: [
+      "Deducibilidad de impuestos bajo el Art. 151 de la LISR",
+      "Deducibilidad bajo el Art. 185 de la LISR",
+      "Fondos de inversión con rendimientos protegidos",
+      "Protección automática contra inflación y devaluación",
+    ],
+    image: "/images/retirement.png",
   },
   {
     tag: "Salud & Bienestar",
@@ -46,15 +47,26 @@ const services = [
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200",
   },
   {
-    tag: "Futuro Financiero",
-    title: "Planes Personales de Retiro (PPR)",
-    description: "El retiro es la etapa más larga de tu vida. Implementamos planes que aprovechan los beneficios fiscales para que tus rendimientos protejan tu patrimonio contra la inflación.",
+    tag: "Protección Familiar",
+    title: "Asesoría En Seguros De Vida",
+    description: "No solo vendemos pólizas, diseñamos el blindaje de tu familia. Te ayudamos a elegir el seguro de vida ideal, con opciones flexibles que incluyen ahorro y cobertura personalizada.",
     features: [
-      "Deducibilidad de impuestos bajo el Art. 151 de la LISR",
-      "Fondos de inversión con rendimientos protegidos",
-      "Protección automática contra inflación y devaluación",
+      "Coberturas flexibles adaptadas a tu etapa de vida",
+      "Estrategias con componente de ahorro e inversión bursátil",
+      "Blindaje patrimonial ante fluctuaciones económicas",
     ],
-    image: "/images/retirement.png",
+    image: "/images/life-insurance.png",
+  },
+  {
+    tag: "Protección de Bienes",
+    title: "Asesoría en Protección de Patrimonio",
+    description: "Asegura lo que tanto te ha costado construir. Ofrecemos soluciones integrales para la protección de tus bienes materiales más valiosos.",
+    features: [
+      "Seguros de Auto con cobertura amplia",
+      "Protección de Hogar y Bienes Inmuebles",
+      "Asistencia ante siniestros y asesoría legal",
+    ],
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200",
   },
 ]
 

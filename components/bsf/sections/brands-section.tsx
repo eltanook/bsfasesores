@@ -5,14 +5,11 @@ import { AnimateOnScroll } from "@/components/bsf/animate-on-scroll"
 
 // Placeholder brand names for insurance companies
 const brands = [
-  "GNP Seguros",
-  "Metlife",
-  "AXA",
-  "Allianz",
-  "MAPFRE",
-  "Zurich",
   "Seguros Monterrey",
-  "Banorte Seguros",
+  "Allianz",
+  "GNP Seguros",
+  "AXA",
+  "MAPFRE",
 ]
 
 export function BrandsSection() {

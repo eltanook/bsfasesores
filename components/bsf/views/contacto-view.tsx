@@ -34,8 +34,8 @@ const contactInfo = [
 
 export function ContactoView({ isDarkMode }: { isDarkMode: boolean }) {
   const calendlyUrl = isDarkMode 
-    ? "https://calendly.com/alexblan/45min?hide_landing_page_details=1&hide_gdpr_banner=1&back=1&month=2026-04&background_color=0a1628&text_color=ffffff&primary_color=1a6acd"
-    : "https://calendly.com/alexblan/45min?hide_landing_page_details=1&hide_gdpr_banner=1&back=1&month=2026-04"
+    ? "https://calendly.com/alexblan?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=0a1628&text_color=ffffff&primary_color=1a6acd"
+    : "https://calendly.com/alexblan?hide_landing_page_details=1&hide_gdpr_banner=1"
 
   const [formState, setFormState] = useState({
     nombre: "",
@@ -70,7 +70,7 @@ export function ContactoView({ isDarkMode }: { isDarkMode: boolean }) {
                 Entrevista con <span className="text-[#1a6acd] dark:text-white">Alex Blanco</span>
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed italic">
-                Selecciona el horario que mejor te convenga para una entrevista de perfilamiento 
+                Elige el tipo de entrevista y selecciona el horario que mejor te convenga para una entrevista de perfilamiento 
                 con nuestro equipo de liderazgo.
               </p>
             </div>

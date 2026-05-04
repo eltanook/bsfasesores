@@ -74,8 +74,9 @@ export function AboutSection({ onNavigate }: AboutSectionProps) {
               Sobre <span className="text-[#1a6acd] dark:text-white">BSF Asesores</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              BSF Asesores es una firma de élite con más de 25 años de trayectoria sólida en el mercado asegurador y financiero mexicano. 
-              Nos especializamos en el diseño de estrategias de blindaje patrimonial, optimización fiscal y desarrollo integral de negocios. 
+              BSF Asesores es una firma de élite con más de 25 años de trayectoria sólida en el sistema financiero mexicano. 
+              Nos especializamos en el desarrollo de asesores profesionales de seguros, que a través de asesorías personalizadas brindan 
+              estrategias de blindaje patrimonial, optimización fiscal y desarrollo integral de negocios. 
               Nuestra filosofía se basa en ir más allá de una simple protección; buscamos construir legados financieros resilientes que garanticen 
               la tranquilidad y el bienestar de las familias y empresas que confían en nosotros.
             </p>
@@ -126,30 +127,50 @@ export function AboutSection({ onNavigate }: AboutSectionProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/60 via-transparent to-transparent z-10" />
                 
                 {/* Social Overlay on Hover (Below Labels) */}
-                <div className="absolute inset-0 bg-[#0a1628]/40 backdrop-blur-sm opacity-0 group-hover/img:opacity-100 transition-all duration-500 flex items-center justify-center gap-6 z-20">
+                <div className="absolute inset-0 bg-[#0a1628]/40 backdrop-blur-sm opacity-0 group-hover/img:opacity-100 transition-all duration-500 flex flex-wrap items-center justify-center gap-4 lg:gap-6 z-20 p-4">
                   <motion.a 
                     whileHover={{ scale: 1.2, y: -5 }}
                     href="#" 
                     aria-label="Instagram"
-                    className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white border border-white/20 hover:bg-[#1a6acd] transition-colors"
+                    className="w-10 h-10 lg:w-12 lg:h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white border border-white/20 hover:bg-[#1a6acd] transition-colors"
                   >
-                    <Instagram className="w-6 h-6" />
+                    <Instagram className="w-5 h-5 lg:w-6 lg:h-6" />
                   </motion.a>
                   <motion.a 
                     whileHover={{ scale: 1.2, y: -5 }}
                     href="#" 
                     aria-label="LinkedIn"
-                    className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white border border-white/20 hover:bg-[#1a6acd] transition-colors"
+                    className="w-10 h-10 lg:w-12 lg:h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white border border-white/20 hover:bg-[#1a6acd] transition-colors"
                   >
-                    <Linkedin className="w-6 h-6" />
+                    <Linkedin className="w-5 h-5 lg:w-6 lg:h-6" />
                   </motion.a>
                   <motion.a 
                     whileHover={{ scale: 1.2, y: -5 }}
                     href="#" 
                     aria-label="Facebook"
-                    className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white border border-white/20 hover:bg-[#1a6acd] transition-colors"
+                    className="w-10 h-10 lg:w-12 lg:h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white border border-white/20 hover:bg-[#1a6acd] transition-colors"
                   >
-                    <Facebook className="w-6 h-6" />
+                    <Facebook className="w-5 h-5 lg:w-6 lg:h-6" />
+                  </motion.a>
+                  <motion.a 
+                    whileHover={{ scale: 1.2, y: -5 }}
+                    href="#" 
+                    aria-label="YouTube"
+                    className="w-10 h-10 lg:w-12 lg:h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white border border-white/20 hover:bg-[#1a6acd] transition-colors"
+                  >
+                    <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                  </motion.a>
+                  <motion.a 
+                    whileHover={{ scale: 1.2, y: -5 }}
+                    href="#" 
+                    aria-label="TikTok"
+                    className="w-10 h-10 lg:w-12 lg:h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white border border-white/20 hover:bg-[#1a6acd] transition-colors"
+                  >
+                    <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
                   </motion.a>
                 </div>
               </div>

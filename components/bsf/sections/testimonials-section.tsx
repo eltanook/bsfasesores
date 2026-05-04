@@ -6,10 +6,10 @@ import Image from "next/image"
 
 const testimonials = [
   {
-    name: "Adolfo Carrizales",
-    role: "Cliente",
+    name: "Nombre del Asesor",
+    role: "Asesor BSF",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/adolfo-sTw1kutAe9qxgo0rFpgwg670xgKpw5.jpg",
-    quote: "Quiero agradecer a Edgar Blanco por su respaldo para poder iniciar en esta nueva experiencia y sé que vamos a lograr muchas cosas ya que es una persona muy trabajadora, responsable y dedicada, además de ser muy empática con sus asesores.",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
     name: "Emanuel Blanco Rosales",
@@ -42,7 +42,7 @@ export function TestimonialsSection() {
             Testimonios
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white dark:text-[#1a6acd] mb-6 font-serif">
-            Lo que dicen <span className="text-[#1a6acd] dark:text-white">nuestros clientes</span>
+            Lo que dicen <span className="text-[#1a6acd] dark:text-white">nuestros clientes y asesores</span>
           </h2>
         </AnimateOnScroll>
 

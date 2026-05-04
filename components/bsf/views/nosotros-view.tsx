@@ -247,6 +247,8 @@ export function NosotrosView({ onNavigate }: NosotrosViewProps) {
         </div>
       </section>
 
+      {/* Trayectoria Section - Hidden as requested */}
+      {false && (
       <section className="py-24 lg:py-32 bg-[#0a1628] text-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative">
           <AnimateOnScroll variant="fadeUp" className="text-center mb-24">
@@ -306,6 +308,7 @@ export function NosotrosView({ onNavigate }: NosotrosViewProps) {
           1999
         </div>
       </section>
+      )}
     </div>
   )
 }

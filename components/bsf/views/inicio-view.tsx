@@ -17,8 +17,8 @@ interface InicioViewProps {
 
 export function InicioView({ onNavigate, isDarkMode }: InicioViewProps) {
   const calendlyUrl = isDarkMode 
-    ? "https://calendly.com/alexblan/45min?hide_landing_page_details=1&hide_gdpr_banner=1&back=1&month=2026-04&background_color=0a1628&text_color=ffffff&primary_color=1a6acd"
-    : "https://calendly.com/alexblan/45min?hide_landing_page_details=1&hide_gdpr_banner=1&back=1&month=2026-04"
+    ? "https://calendly.com/alexblan?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=0a1628&text_color=ffffff&primary_color=1a6acd"
+    : "https://calendly.com/alexblan?hide_landing_page_details=1&hide_gdpr_banner=1"
 
   return (
     <div className="pt-16 lg:pt-20">

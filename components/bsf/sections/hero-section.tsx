@@ -3,14 +3,14 @@
 import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Heart, TrendingUp, Building2, ShieldCheck } from "lucide-react"
+import { Heart, TrendingUp, Building2, ShieldCheck, Home } from "lucide-react"
 import type { ViewType } from "@/app/page"
 
 interface HeroSectionProps {
   onNavigate: (view: ViewType) => void
 }
 
-const dynamicWords = ["Familia", "Retiro", "Empresa", "Salud"]
+const dynamicWords = ["Familia", "Retiro", "Empresa", "Patrimonio", "Salud"]
 
 // CountUp component
 function CountUpStat({ end, suffix = "", label }: { end: number; suffix?: string; label: string }) {
@@ -96,7 +96,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
           >
             <h1 className="text-6xl md:text-5xl lg:text-8xl font-black leading-[1.1] mb-8 font-serif text-[#1a6acd] dark:text-white">
               Protegemos tu <br/>
-              <span className="relative inline-block min-w-[200px]">
+              <span className="relative inline-block min-w-[280px]">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={dynamicWords[currentWordIndex]}
@@ -173,9 +173,10 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
                           {index === 0 && <Heart className="w-5 h-5 text-white" />}
                           {index === 1 && <TrendingUp className="w-5 h-5 text-white" />}
                           {index === 2 && <Building2 className="w-5 h-5 text-white" />}
-                          {index === 3 && <ShieldCheck className="w-5 h-5 text-white" />}
+                          {index === 3 && <Home className="w-5 h-5 text-white" />}
+                          {index === 4 && <ShieldCheck className="w-5 h-5 text-white" />}
                         </div>
-                        <span className="text-white font-medium">{word}</span>
+                        <span className="text-white font-medium">{word === "Patrimonio" ? "Patrimonio (Autos y Casas)" : word}</span>
                       </motion.div>
                     ))}
                   </div>

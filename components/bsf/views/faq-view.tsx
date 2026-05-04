@@ -18,7 +18,7 @@ const faqs = [
   {
     category: "general",
     question: "¿En qué ciudades de México tienen presencia?",
-    answer: "Nuestra oficina central está en la Ciudad de México (Av. Reforma), pero brindamos asesoría digital y presencial en toda la República Mexicana. Hemos protegido familias desde Tijuana hasta Cancún.",
+    answer: "Nuestra oficina central está en la Ciudad de México (Av. Reforma), pero brindamos asesoría digital en toda la República Mexicana. Hemos protegido familias desde Tijuana hasta Cancún.",
   },
   {
     category: "general",
@@ -28,7 +28,7 @@ const faqs = [
   {
     category: "general",
     question: "¿Qué compañías aseguradoras respaldan sus servicios?",
-    answer: "Trabajamos con las instituciones líderes en el mercado, incluyendo GNP, AXA, MetLife, Seguros Monterrey y Allianz, entre otras. Esto nos permite comparar y ofrecerte siempre la mejor opción.",
+    answer: "Trabajamos con las instituciones líderes en el mercado, incluyendo Seguros Monterrey, Allianz, GNP y AXA. Esto nos permite comparar y ofrecerte siempre la mejor opción.",
   },
   {
     category: "general",
@@ -62,7 +62,7 @@ const faqs = [
   {
     category: "retiro",
     question: "¿Cómo funcionan los beneficios fiscales en los planes de retiro?",
-    answer: "Los planes personales de retiro (PPR) te permiten deducir tus aportaciones de impuestos anualmente (Art. 151 LISR). Esto significa que el gobierno te devuelve una parte de tu ahorro cada año en tu declaración anual.",
+    answer: "Los planes personales de retiro (PPR) te permiten deducir tus aportaciones de impuestos anualmente bajo el Artículo 151 y Artículo 185 de la LISR. Esto significa que el gobierno te devuelve una parte de tu ahorro cada año en tu declaración anual.",
   },
   {
     category: "retiro",
@@ -84,17 +84,17 @@ const faqs = [
   {
     category: "asesores",
     question: "¿Qué apoyo brindan a los nuevos asesores?",
-    answer: "Ofrecemos el programa 'BSF Academy': capacitación técnica certificada, mentoría 1-a-1 con Edgar Blanco, herramientas digitales de prospección y acceso directo a los portales de las mejores aseguradoras.",
+    answer: "Con ALEZ Blanco y su equipo de desarrolladores recibirás capacitación, acompañamiento y herramientas digitales de prospección para potenciar tu carrera desde el primer día.",
   },
   {
     category: "asesores",
     question: "¿Es necesario tener experiencia previa para ser asesor?",
-    answer: "No es indispensable, pero buscamos perfiles con alta ética, vocación de servicio y ambición. Nosotros te certificamos ante la CNSF y te enseñamos la metodología que nos ha dado 25 años de éxito.",
+    answer: "No es indispensable, pero buscamos perfiles con alta ética, vocación de servicio y ambición. Nosotros te CAPACITAMOS para la certificación ante la CNSF y te enseñamos la metodología que nos ha dado 25 años de éxito.",
   },
   {
     category: "asesores",
     question: "¿Cuál es el esquema de compensación?",
-    answer: "Contamos con uno de los esquemas de comisiones y bonos más competitivos del sector, además de convenciones internacionales y premios por cumplimiento de metas de protección.",
+    answer: "Contamos con uno de los esquemas de comisiones y bonos más competitivos del sector, además de convenciones nacionales e internacionales y campañas que ofrecen premios por cumplimiento de metas.",
   },
   {
     category: "asesores",
