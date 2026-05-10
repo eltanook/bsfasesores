@@ -99,7 +99,7 @@ export function Footer({ onNavigate }: FooterProps) {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-400">
-              Copyright &copy; BSF ASESORES {new Date().getFullYear()}. Sitio web desarrollado por Nexium.
+              Copyright &copy; BSF ASESORES {new Date().getFullYear()}. Sitio web desarrollado por <a href="https://zevetix.online" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-4">Zevetix</a>.
             </p>
 
             {/* Social Links */}

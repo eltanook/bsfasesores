@@ -17,7 +17,7 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://bsfasesores.vercel.app'),
+  metadataBase: new URL('https://www.bsfasesores.com.mx/'),
   title: 'BSF Asesores | Protección Patrimonial y Seguros de Vida',
   description: 'Firma financiera líder con más de 25 años de experiencia. Especialistas en seguros de vida, gastos médicos mayores y planes de retiro. Protegemos tu futuro y el de tu familia.',
   keywords: ['seguros de vida', 'asesores financieros México', 'planes de retiro CDMX', 'gastos médicos mayores', 'protección patrimonial', 'BSF Asesores'],
