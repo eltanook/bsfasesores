@@ -50,11 +50,36 @@ export function ContactoView({ isDarkMode }: { isDarkMode: boolean }) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormState({ nombre: "", empresa: "", telefono: "", email: "", mensaje: "" })
-    setTimeout(() => setIsSubmitted(false), 5000)
+    
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/contacto@bsfasesores.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: "Nuevo mensaje de contacto - BSF Asesores",
+          Nombre: formState.nombre,
+          Empresa: formState.empresa,
+          Email: formState.email,
+          Teléfono: formState.telefono,
+          Mensaje: formState.mensaje
+        })
+      });
+      
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormState({ nombre: "", empresa: "", telefono: "", email: "", mensaje: "" })
+        setTimeout(() => setIsSubmitted(false), 5000)
+      } else {
+        console.error("Error al enviar el formulario");
+      }
+    } catch (error) {
+      console.error("Error de red:", error);
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
